@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — White Oak Children's Academy</title>
+  <meta name="description" content="Contact White Oak Children's Academy in Schererville, IN. Phone: 219.322.6400 ext. 391. Email: whiteoakchildrensacademy@gmail.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="White Oak Children's Academy logo" class="logo-img"
+             onerror="this.style.display='none'" />
+        <span class="logo-text">White Oak Children's Academy</span>
+      </a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="https://youtu.be/olmir94_Q6E" target="_blank" rel="noopener">Virtual Tour</a>
+        <a href="registration.pdf" target="_blank">Registration</a>
+        <a href="about.html">About Us</a>
+        <a href="programs.html">Programs</a>
+        <a href="staff.html">Staff</a>
+        <a href="news-events.html">News &amp; Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="faq.html">FAQ</a>
+        <a href="faq-forms.html">FAQ &amp; Forms</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="https://youtu.be/olmir94_Q6E" target="_blank" rel="noopener">Virtual Tour</a>
+      <a href="registration.pdf" target="_blank">Registration</a>
+      <a href="about.html">About Us</a>
+      <a href="programs.html">Programs</a>
+      <a href="staff.html">Staff</a>
+      <a href="news-events.html">News &amp; Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQ</a>
+      <a href="faq-forms.html">FAQ &amp; Forms</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you — reach out with any questions about enrollment or programs</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- INFO -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Whether you have questions about our programs, enrollment, or anything else, we're happy to help.</p>
+
+          <div class="contact-detail">
+            <span class="icon">📍</span>
+            <div>
+              <p><strong>Location</strong></p>
+              <p>@ Crossroads Community Church<br />1538 Janice Drive<br />Schererville, IN 46375</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="icon">📞</span>
+            <div>
+              <p><strong>Phone</strong></p>
+              <p><a href="tel:+12193226400">219.322.6400 ext. 391</a></p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="icon">✉️</span>
+            <div>
+              <p><strong>Email</strong></p>
+              <p><a href="mailto:whiteoakchildrensacademy@gmail.com">whiteoakchildrensacademy@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <span class="icon">📘</span>
+            <div>
+              <p><strong>Facebook</strong></p>
+              <p><a href="https://www.facebook.com/whiteoakpreschool/" target="_blank" rel="noopener">Find us on Facebook</a></p>
+            </div>
+          </div>
+
+          <div style="margin-top:1.75rem;background:var(--green-light);border-radius:8px;padding:1.25rem;">
+            <p style="margin:0;font-size:.92rem;"><strong>Registration status:</strong> Enrollment for the 2026–2027 school year is currently <strong>closed</strong>. Summer Camps 2026 registration is <strong>open</strong> — contact us to sign up!</p>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+              <span class="form-error">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+              <span class="form-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="font-weight:400;color:var(--text-light);">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="219-555-0100" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Program inquiry, enrollment question…" required />
+              <span class="form-error">Please enter a subject.</span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your child's age, the program you're interested in, or any questions you have…" required></textarea>
+              <span class="form-error">Please enter a message.</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          </form>
+          <div class="form-success" id="form-success">
+            ✅ Your details were sent successfully! We'll be in touch soon.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h4>White Oak Children's Academy</h4>
+          <p>An academic preschool with a Christian influence serving families in Schererville, Northwest Indiana since 2014.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>@ Crossroads Community Church<br />1538 Janice Drive<br />Schererville, IN 46375</p>
+          <p><a href="tel:+12193226400">219.322.6400 ext. 391</a></p>
+          <p><a href="mailto:whiteoakchildrensacademy@gmail.com">whiteoakchildrensacademy@gmail.com</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <p><a href="programs.html">Programs</a></p>
+          <p><a href="staff.html">Staff</a></p>
+          <p><a href="news-events.html">News &amp; Events</a></p>
+          <p><a href="faq.html">FAQ</a></p>
+          <p><a href="faq-forms.html">Forms</a></p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/whiteoakpreschool/" target="_blank" rel="noopener" aria-label="Facebook">&#x1F4D8;</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 White Oak Children's Academy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
