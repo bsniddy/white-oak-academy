@@ -7,17 +7,17 @@
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --green-dark:  #2d5a27;
-  --green-mid:   #4a7c3f;
-  --green-light: #e8f5e3;
-  --green-hover: #3a6e30;
-  --cream:       #faf8f2;
-  --amber:       #d97706;
-  --amber-light: #fef3c7;
+  --green-dark:  #1a4a7a;
+  --green-mid:   #2e7abf;
+  --green-light: #deeef8;
+  --green-hover: #1d5e9e;
+  --cream:       #fdf8f3;
+  --amber:       #8b5e3c;
+  --amber-light: #f5ebe0;
   --text:        #2b2b2b;
   --text-light:  #555;
   --white:       #ffffff;
-  --border:      #d1e8cc;
+  --border:      #b8d8f0;
   --shadow:      0 2px 12px rgba(0,0,0,.10);
   --radius:      8px;
   --nav-height:  70px;
