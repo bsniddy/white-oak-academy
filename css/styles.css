@@ -61,11 +61,11 @@ p:last-child { margin-bottom: 0; }
 }
 .btn-primary:hover { background: var(--green-hover); transform: translateY(-1px); }
 .btn-outline {
-  background: transparent;
-  color: var(--green-dark);
+  background: var(--green-mid);
+  color: var(--white);
   border-color: var(--green-mid);
 }
-.btn-outline:hover { background: var(--green-light); }
+.btn-outline:hover { background: var(--green-hover); transform: translateY(-1px); }
 
 /* ---------- Section Spacing ---------- */
 .section { padding: 4rem 0; }
@@ -177,8 +177,8 @@ p:last-child { margin-bottom: 0; }
    ANNOUNCEMENT BANNER
    ================================ */
 .announcement-banner {
-  background: var(--amber-light);
-  border-bottom: 3px solid var(--amber);
+  background: var(--white);
+  border-bottom: 3px solid var(--green-light);
   padding: .85rem 1.5rem;
   text-align: center;
 }
@@ -186,7 +186,7 @@ p:last-child { margin-bottom: 0; }
   margin: 0;
   font-weight: 700;
   font-size: .95rem;
-  color: #7c2d12;
+  color: var(--text);
   line-height: 1.5;
 }
 .announcement-banner .tag {
