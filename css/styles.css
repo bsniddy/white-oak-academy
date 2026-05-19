@@ -3,25 +3,34 @@
    styles.css
    =========================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Quicksand:wght@500;600;700&display=swap');
 
 /* ---------- CSS Variables ---------- */
 :root {
-  --green-dark:  #1d7a9e;
-  --green-mid:   #2596be;
-  --green-light: #cceaf5;
-  --green-hover: #1a6a8a;
-  --cream:       #f4faff;
-  --amber:       #402d26;
-  --amber-light: #f5ebe0;
-  --text:        #2b2b2b;
-  --text-light:  #555;
-  --white:       #ffffff;
-  --border:      #a8d8f5;
-  --shadow:      0 2px 12px rgba(0,0,0,.10);
-  --radius:      8px;
-  --nav-height:  70px;
-  --max-width:   1100px;
+  /* Brand palette (new) */
+  --blue-pastel:  #cce8f7;   /* dominant brand tone */
+  --blue-soft:    #e8f4fc;
+  --blue-primary: #2596be;   /* deeper blue — buttons, links, accents */
+  --blue-hover:   #1a6a8a;
+  --cream:        #fcfaf7;   /* warmer page bg */
+  --amber:        #b76e4e;   /* warm terracotta for tag */
+  --amber-light:  #fbe9df;
+  --text:         #3a3530;   /* warm dark */
+  --text-light:   #6b6660;
+  --white:        #ffffff;
+  --border:       #d9ebf5;
+  --shadow:       0 4px 18px rgba(50, 80, 110, 0.08);
+  --shadow-hover: 0 10px 28px rgba(50, 80, 110, 0.12);
+  --radius:       18px;
+  --radius-sm:    10px;
+  --nav-height:   70px;
+  --max-width:    1100px;
+
+  /* Legacy aliases — keep older rules working without find/replace */
+  --green-mid:   var(--blue-primary);
+  --green-dark:  var(--blue-hover);
+  --green-light: var(--blue-pastel);
+  --green-hover: var(--blue-hover);
 }
 
 /* ---------- Reset ---------- */
@@ -33,10 +42,10 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
 /* ---------- Typography ---------- */
-h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
-h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
-h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--green-dark); margin-bottom: .5rem; }
-h3 { font-size: 1.25rem; color: var(--green-dark); margin-bottom: .4rem; }
+h1, h2, h3, h4 { font-family: 'Quicksand', sans-serif; line-height: 1.2; letter-spacing: -0.01em; font-weight: 600; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--blue-primary); margin-bottom: .5rem; }
+h3 { font-size: 1.25rem; color: var(--blue-primary); margin-bottom: .4rem; font-weight: 600; }
 p  { margin-bottom: 1rem; color: var(--text-light); }
 p:last-child { margin-bottom: 0; }
 
@@ -46,26 +55,29 @@ p:last-child { margin-bottom: 0; }
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
-  padding: .65rem 1.6rem;
-  border-radius: var(--radius);
-  font-family: 'Lato', sans-serif;
+  padding: .75rem 1.8rem;
+  border-radius: 999px;
+  font-family: 'Quicksand', 'Lato', sans-serif;
   font-size: .95rem;
   font-weight: 700;
+  letter-spacing: .01em;
   cursor: pointer;
-  transition: background .2s, transform .1s;
+  transition: background .2s, transform .15s, box-shadow .2s;
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--green-mid);
+  background: var(--blue-primary);
   color: var(--white);
+  box-shadow: 0 4px 12px rgba(37, 150, 190, 0.25);
 }
-.btn-primary:hover { background: var(--green-hover); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(37, 150, 190, 0.35); }
 .btn-outline {
-  background: var(--green-mid);
+  background: var(--blue-primary);
   color: var(--white);
-  border-color: var(--green-mid);
+  border-color: var(--blue-primary);
+  box-shadow: 0 4px 12px rgba(37, 150, 190, 0.25);
 }
-.btn-outline:hover { background: var(--green-hover); transform: translateY(-1px); }
+.btn-outline:hover { background: var(--blue-hover); border-color: var(--blue-hover); transform: translateY(-2px); box-shadow: 0 8px 18px rgba(37, 150, 190, 0.35); }
 
 /* ---------- Section Spacing ---------- */
 .section { padding: 4rem 0; }
@@ -101,8 +113,9 @@ p:last-child { margin-bottom: 0; }
   width: auto;
 }
 .logo-text {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.05rem;
+  font-weight: 700;
   color: var(--white);
   line-height: 1.25;
   max-width: 180px;
@@ -116,8 +129,8 @@ p:last-child { margin-bottom: 0; }
   font-weight: 700;
   letter-spacing: .03em;
   text-transform: uppercase;
-  padding: .45rem .6rem;
-  border-radius: 4px;
+  padding: .45rem .75rem;
+  border-radius: 999px;
   white-space: nowrap;
   transition: background .15s, color .15s;
 }
@@ -194,11 +207,11 @@ p:last-child { margin-bottom: 0; }
   background: var(--amber);
   color: var(--white);
   font-size: .75rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .06em;
-  padding: .2rem .6rem;
-  border-radius: 3px;
+  padding: .25rem .75rem;
+  border-radius: 999px;
   margin-right: .4rem;
 }
 
@@ -219,7 +232,7 @@ p:last-child { margin-bottom: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .38;
+  opacity: .55;
 }
 .hero-content {
   position: relative;
@@ -252,7 +265,7 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   flex-direction: column;
 }
-.home-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.13); }
+.home-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 .home-card-img {
   width: 100%;
   height: 200px;
@@ -347,7 +360,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 2rem;
 }
 .quote-block blockquote {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.3rem;
   color: var(--green-dark);
   max-width: 650px;
@@ -360,12 +373,13 @@ p:last-child { margin-bottom: 0; }
    STAFF PAGE
    ================================ */
 .staff-section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--green-mid);
-  border-bottom: 2px solid var(--green-light);
+  letter-spacing: .08em;
+  color: var(--blue-primary);
+  border-bottom: 2px solid var(--blue-pastel);
   padding-bottom: .5rem;
   margin: 2.5rem 0 1.25rem;
 }
@@ -531,7 +545,7 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 1.75rem;
 }
 .footer-col h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Quicksand', sans-serif;
   color: var(--white);
   font-size: 1rem;
   margin-bottom: .75rem;
@@ -563,7 +577,7 @@ p:last-child { margin-bottom: 0; }
    PAGE HERO (inner pages)
    ================================ */
 .page-hero {
-  background: var(--green-dark);
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-hover));
   padding: 2.5rem 0;
   text-align: center;
 }
