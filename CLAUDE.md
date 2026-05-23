@@ -47,4 +47,5 @@ Deploy by pushing to `main` — GitHub Pages auto-deploys.
 - Facebook: `https://www.facebook.com/whiteoakpreschool/`
 - Contact: `whiteoakchildrensacademy@gmail.com` / 219.322.6400 ext. 391
 - Address: @ Crossroads Community Church, 1538 Janice Drive, Schererville, IN 46375
-- The contact form is front-end only (no server). For form submission on GitHub Pages, wire up [Formspree](https://formspree.io) by adding `action="https://formspree.io/f/YOUR_ID" method="POST"` to the `<form>` tag in `contact.html`.
+- The contact form submits via [Web3Forms](https://web3forms.com) (free tier: 250 submissions/month). The access key lives in a hidden input in `contact.html` (`name="access_key"`). On submit, `js/main.js` POSTs the form via `fetch` to `https://api.web3forms.com/submit`; success shows the `#form-success` div, errors show an alert. Spam protection is a hidden `botcheck` honeypot checkbox.
+- Custom domain: `whiteoakchildrensacademy.com` is configured via the `CNAME` file at the repo root. DNS records (A records pointing to GitHub Pages IPs + a `www` CNAME pointing to `bsniddy.github.io`) live at the domain registrar.

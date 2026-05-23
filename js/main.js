@@ -77,8 +77,32 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (valid) {
-        form.style.display = 'none';
-        document.getElementById('form-success').classList.add('visible');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            form.style.display = 'none';
+            document.getElementById('form-success').classList.add('visible');
+          } else {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+            alert('Sorry, there was an issue sending your message. Please email us directly at whiteoakchildrensacademy@gmail.com.');
+          }
+        })
+        .catch(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+          alert('Sorry, there was an issue sending your message. Please email us directly at whiteoakchildrensacademy@gmail.com.');
+        });
       }
     });
   }
