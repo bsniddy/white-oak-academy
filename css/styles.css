@@ -216,8 +216,8 @@ p:last-child { margin-bottom: 0; }
   border-radius: 999px;
   margin-right: .4rem;
 }
-.announcement-banner .tag-notice { background: #c4614a; } /* terracotta red */
-.announcement-banner .tag-open   { background: #5a8a63; } /* terracotta green */
+.tag-notice { background: #c4614a; } /* terracotta red */
+.tag-open   { background: #5a8a63; } /* terracotta green */
 
 /* ================================
    HERO
