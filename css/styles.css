@@ -401,6 +401,8 @@ p:last-child { margin-bottom: 0; }
   object-fit: cover;
   object-position: 50% 70%;
 }
+/* Photos where the subject sits lower in the original frame */
+.staff-photo-low { object-position: 50% 82%; }
 .staff-photo-placeholder {
   width: 100%;
   height: 220px;
@@ -606,6 +608,9 @@ p:last-child { margin-bottom: 0; }
   .home-cards { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .staff-grid { grid-template-columns: 1fr 1fr; }
+  /* Wider cards crop more vertically — give photos more room and recentre */
+  .staff-photo { height: 280px; object-position: 50% 55%; }
+  .staff-photo-low { object-position: 50% 62%; }
 }
 
 @media (max-width: 480px) {
@@ -613,4 +618,7 @@ p:last-child { margin-bottom: 0; }
   .programs-grid { grid-template-columns: 1fr; }
   .hero { min-height: 320px; }
   .hero-content h1 { font-size: 1.6rem; }
+  /* Full-width cards crop the most — tallest photo, most centred */
+  .staff-photo { height: 340px; object-position: 50% 45%; }
+  .staff-photo-low { object-position: 50% 52%; }
 }
